@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#00CF91">
+  <meta name="msapplication-navbutton-color" content="#1D1F23">
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="#1D1F23">
+
+  <!--  SUPPORT FAVICON ALL TOUCH-->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="android-chrome-192x192.png">
+  <meta name="msapplication-config" content="browserconfig.xml"/>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!--  ICONS-->
+  <link rel="stylesheet" href="icons/style.css">
+  <!--  ICONS-->
+  <link href="css/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+  <title>MediaCatalog Ads Company</title>
+
+</head>
+<body>
+
+<div class="overflow-hidden">
+
+  <div class="content-site">
+    <div class="menu-left">
+      <div
+          class="w-100 h-69 border-bottom menu-left-item br-0">
+        <span class="icon-menu c-blackGrey"></span>
+      </div>
+      <div class="w-56 minh-56 menu-left-item">
+        <span class="icon-info fs-18 c-blackGrey"></span>
+      </div>
+      <div class="w-56 minh-56 menu-left-item">
+        <span class="icon-maps fs-18 c-blackGrey"></span>
+      </div>
+      <div class="w-56 minh-56 menu-left-item">
+        <span class="icon-list fs-18 c-blackGrey"></span>
+      </div>
+      <div class="w-56 minh-56 menu-left-item active">
+        <span class="icon-image fs-18 c-blackGrey"></span>
+      </div>
+      <div class="w-56 minh-56 menu-left-item">
+        <span class="icon-user fs-18 c-blackGrey"></span>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <div class="h-69 border-bottom d-flex justify-content-between align-items-center ps-24">
+        <div class="d-flex justify-content-start align-items-center">
+          <a href="#">
+            <img src="images/logo-media-catalog.svg" alt="logo-media-catalog" width="147" height="25">
+          </a>
+        </div>
+        <div class="d-flex justify-content-start align-items-center">
+          <a href="#" class="main-content-tab active">1 Подбор конструкций</a>
+          <a href="#" class="main-content-tab">2 Параметры кампании</a>
+          <a href="#" class="main-content-tab">3 Макеты</a>
+          <a href="#" class="main-content-tab opacity-25">4 Информация</a>
+        </div>
+        <div class="d-flex justify-content-end align-items-center me-3">
+          <div class="dropdown balance-dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+              <span class="icon-wallet"></span>
+              250 000 ₽
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Пополнить</a></li>
+              <li><a class="dropdown-item" href="#">Движение cредств</a></li>
+            </ul>
+          </div>
+          <div class="main-content-push">
+            <span class="icon-push"></span>
+          </div>
+        </div>
+      </div>
+
+
+      <div>
+        <div class="row m-0 ads-company-row">
+          <div class="col-12 pt-19 ps-24 h-100">
+            <h3 class="fs-36 fw-bold mb-3">
+              Рекламные кампании
+            </h3>
+
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex justify-content-start align-items-center">
+                <span class="c-black fs-16">Статус</span>
+
+                <label class="form-check-label ms-3">
+                  <input class="form-check-input" type="checkbox" value="">
+                  <span class="fs-12">Активна</span>
+                </label>
+                <label class="form-check-label ms-3">
+                  <input class="form-check-input" type="checkbox" value="">
+                  <span class="fs-12">Приостановлена</span>
+                </label>
+                <label class="form-check-label ms-3">
+                  <input class="form-check-input" type="checkbox" value="">
+                  <span class="fs-12">Завершена</span>
+                </label>
+                <label class="form-check-label ms-3">
+                  <input class="form-check-input" type="checkbox" value="">
+                  <span class="fs-12">Планирование</span>
+                </label>
+              </div>
+
+              <button class="green-btn">
+                Создать кампанию
+                <span class="icon-right ms-2 fs-12"></span>
+              </button>
+            </div>
+
+            <table class="default-table mt-4 %w-90">
+              <tbody>
+              <tr>
+                <th>
+                  <div>
+                    <label class="form-check-label fw-bold d-flex align-items-center justify-content-start">
+                      <input class="form-check-input mt-0 select-all-table" type="checkbox" value="">
+                      <span class="fs-12">ID</span>
+                    </label>
+                  </div>
+                </th>
+                <th>
+                  <div class="fs-12">
+                    Название
+                  </div>
+                </th>
+                <th>
+                  <div class="fs-12 d-flex justify-content-between align-items-center">
+                    <div>
+                      Тип <br> закупок
+                    </div>
+                    <span class="icon-filter me-2 c-green cursor-pointer"></span>
+                  </div>
+                </th>
+                <th>
+                  <div class="fs-12">
+                    Бюджет
+                  </div>
+                </th>
+                <th>
+                  <div class="fs-12">
+                    Старт
+                  </div>
+                </th>
+                <th>
+                  <div class="fs-12">
+                    Финиш
+                  </div>
+                </th>
+                <th>
+                  <div class="fs-12">
+                    Регион
+                  </div>
+                </th>
+                <th>
+                  <div class="fs-12">
+                    Статус
+                  </div>
+                </th>
+                <th width="48"></th>
+              </tr>
+              <tr>
+                <td>
+                  <div>
+                    <label class="form-check-label d-flex align-items-center justify-content-start">
+                      <input class="form-check-input mt-0" type="checkbox" value="">
+                      <span class="fs-12">81250</span>
+                    </label>
+                  </div>
+                </td>
+                <td width="280">
+                  <div class="fs-12 c-black d-flex justify-content-between align-items-center">
+                    Лазерная резка металла, или может кому-то нужно длинное название кампании
+                    <div class="d-flex">
+                      <div class="default-tooltip">
+                        <span class="default-tooltip-text">Информация о кампании</span>
+                        <span class="icon-analityc fs-14 c-black"></span>
+                      </div>
+                      <div class="default-tooltip">
+                        <span class="default-tooltip-text">Скачать таблицу</span>
+                        <span class="icon-download fs-14 c-black"></span>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td class="p-0">
+                  <div class="fs-12 c-black text-center">
+                    Аукцион
+                  </div>
+                </td>
+                <td>
+                  <div class="fs-12 c-red d-flex justify-content-between align-items-center">
+                    260 000 ₽
+                    <div class="default-tooltip">
+                      <span class="default-tooltip-text">На балансе недостаточно средств</span>
+                      <span class="icon-warning fs-12 c-red"></span>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="fs-12 c-black text-center">
+                    20.03.2024
+                  </div>
+                </td>
+                <td >
+                  <div class="fs-12 c-black text-center">
+                    30.03.2024
+                  </div>
+                </td>
+                <td>
+                  <div class="fs-12 c-black d-flex justify-content-between align-items-center">
+                    Москва
+                    <div class="c-green d-flex justify-content-between align-items-center">
+                      <div class="default-tooltip">
+                        <span class="default-tooltip-text">Посмотреть на карте</span>
+                        <span class="icon-maps fs-12"></span>
+                      </div>
+                      12
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="d-flex justify-content-between align-items-center c-red fs-12">
+                    Планирование
+                    <div class="default-tooltip">
+                      <span class="default-tooltip-text">Вы не завершили оформление кампании. </span>
+                      <span class="icon-warning fs-12"></span>
+                    </div>
+                  </div>
+                </td>
+                <td width="48">
+                  <div class="dropdown balance-dropdown ">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                      <span class="icon-menu-dropdown"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span class="icon-edit me-2"></span>
+                          Редактировать
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span class="icon-copy me-2"></span>
+                          Копировать
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span class="icon-remove me-2"></span>
+                          Удалить
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div>
+                    <label class="form-check-label d-flex align-items-center justify-content-start">
+                      <input class="form-check-input mt-0" type="checkbox" value="">
+                      <span class="fs-12">81250</span>
+                    </label>
+                  </div>
+                </td>
+                <td width="280">
+                  <div class="fs-12 c-black d-flex justify-content-between align-items-center">
+                    Лазерная резка металла, или может кому-то нужно длинное название кампании
+                    <div class="d-flex">
+                      <div class="default-tooltip">
+                        <span class="default-tooltip-text">Информация о кампании</span>
+                        <span class="icon-analityc fs-14 c-black"></span>
+                      </div>
+                      <div class="default-tooltip">
+                        <span class="default-tooltip-text">Скачать таблицу</span>
+                        <span class="icon-download fs-14 c-black"></span>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td class="p-0">
+                  <div class="fs-12 c-black text-center">
+                    Аукцион
+                  </div>
+                </td>
+                <td>
+                  <div class="fs-12 c-red d-flex justify-content-between align-items-center">
+                    260 000 ₽
+                    <div class="default-tooltip">
+                      <span class="default-tooltip-text">Бюджет кампании</span>
+                      <span class="icon-wallet fs-12 c-green"></span>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="fs-12 c-black text-center">
+                    20.03.2024
+                  </div>
+                </td>
+                <td >
+                  <div class="fs-12 c-black text-center">
+                    30.03.2024
+                  </div>
+                </td>
+                <td>
+                  <div class="fs-12 c-black d-flex justify-content-between align-items-center">
+                    Москва
+                    <div class="c-green d-flex justify-content-between align-items-center">
+                      <div class="default-tooltip">
+                        <span class="default-tooltip-text">Посмотреть на карте</span>
+                        <span class="icon-maps fs-12"></span>
+                      </div>
+                      12
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="d-flex justify-content-between align-items-center c-black fs-12">
+                    Активна
+                    <div class="default-tooltip">
+                      <span class="default-tooltip-text">Приостановить кампанию</span>
+                      <span class="icon-pause fs-12"></span>
+                    </div>
+                  </div>
+                </td>
+                <td width="48">
+                  <div class="dropdown balance-dropdown ">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                      <span class="icon-menu-dropdown"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span class="icon-edit me-2"></span>
+                          Редактировать
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span class="icon-copy me-2"></span>
+                          Копировать
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span class="icon-remove me-2"></span>
+                          Удалить
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div>
+                    <label class="form-check-label d-flex align-items-center justify-content-start">
+                      <input class="form-check-input mt-0" type="checkbox" value="">
+                      <span class="fs-12">81250</span>
+                    </label>
+                  </div>
+                </td>
+                <td width="280">
+                  <div class="fs-12 c-black d-flex justify-content-between align-items-center">
+                    Лазерная резка металла, или может кому-то нужно длинное название кампании
+                    <div class="d-flex">
+                      <div class="default-tooltip">
+                        <span class="default-tooltip-text">Информация о кампании</span>
+                        <span class="icon-analityc fs-14 c-black"></span>
+                      </div>
+                      <div class="default-tooltip">
+                        <span class="default-tooltip-text">Скачать таблицу</span>
+                        <span class="icon-download fs-14 c-black"></span>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td class="p-0">
+                  <div class="fs-12 c-black text-center">
+                    Аукцион
+                  </div>
+                </td>
+                <td>
+                  <div class="fs-12 c-red d-flex justify-content-between align-items-center">
+                    260 000 ₽
+                    <div class="default-tooltip">
+                      <span class="default-tooltip-text">Бюджет кампании</span>
+                      <span class="icon-wallet fs-12 c-green"></span>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="fs-12 c-black text-center">
+                    20.03.2024
+                  </div>
+                </td>
+                <td >
+                  <div class="fs-12 c-black text-center">
+                    30.03.2024
+                  </div>
+                </td>
+                <td>
+                  <div class="fs-12 c-black d-flex justify-content-between align-items-center">
+                    Москва
+                    <div class="c-green d-flex justify-content-between align-items-center">
+                      <div class="default-tooltip">
+                        <span class="default-tooltip-text">Посмотреть на карте</span>
+                        <span class="icon-maps fs-12"></span>
+                      </div>
+                      12
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="d-flex justify-content-between align-items-center c-black fs-12">
+                    Приостановлена
+                    <div class="default-tooltip">
+                      <span class="default-tooltip-text">Запустить кампанию</span>
+                      <span class="icon-play fs-12"></span>
+                    </div>
+                  </div>
+                </td>
+                <td width="48">
+                  <div class="dropdown balance-dropdown ">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                      <span class="icon-menu-dropdown"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span class="icon-edit me-2"></span>
+                          Редактировать
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span class="icon-copy me-2"></span>
+                          Копировать
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span class="icon-remove me-2"></span>
+                          Удалить
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div>
+                    <label class="form-check-label d-flex align-items-center justify-content-start">
+                      <input class="form-check-input mt-0" type="checkbox" value="">
+                      <span class="fs-12">81250</span>
+                    </label>
+                  </div>
+                </td>
+                <td width="280">
+                  <div class="fs-12 c-black d-flex justify-content-between align-items-center">
+                    Лазерная резка металла, или может кому-то нужно длинное название кампании
+                    <div class="d-flex">
+                      <div class="default-tooltip">
+                        <span class="default-tooltip-text">Информация о кампании</span>
+                        <span class="icon-analityc fs-14 c-black"></span>
+                      </div>
+                      <div class="default-tooltip">
+                        <span class="default-tooltip-text">Скачать таблицу</span>
+                        <span class="icon-download fs-14 c-black"></span>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td class="p-0">
+                  <div class="fs-12 c-black text-center">
+                    Аукцион
+                  </div>
+                </td>
+                <td>
+                  <div class="fs-12 c-red d-flex justify-content-between align-items-center">
+                    260 000 ₽
+                    <div class="default-tooltip">
+                      <span class="default-tooltip-text">Бюджет кампании</span>
+                      <span class="icon-wallet fs-12 c-green"></span>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="fs-12 c-black text-center">
+                    20.03.2024
+                  </div>
+                </td>
+                <td >
+                  <div class="fs-12 c-black text-center">
+                    30.03.2024
+                  </div>
+                </td>
+                <td>
+                  <div class="fs-12 c-black d-flex justify-content-between align-items-center">
+                    Москва
+                    <div class="c-green d-flex justify-content-between align-items-center">
+                      <div class="default-tooltip">
+                        <span class="default-tooltip-text">Посмотреть на карте</span>
+                        <span class="icon-maps fs-12"></span>
+                      </div>
+                      12
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="d-flex justify-content-between align-items-center c-black fs-12">
+                    Завершена
+                    <div class="default-tooltip">
+                      <span class="default-tooltip-text">Скопировать кампанию</span>
+                      <span class="icon-copy fs-12"></span>
+                    </div>
+                  </div>
+                </td>
+                <td width="48">
+                  <div class="dropdown balance-dropdown ">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                      <span class="icon-menu-dropdown"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span class="icon-edit me-2"></span>
+                          Редактировать
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span class="icon-copy me-2"></span>
+                          Копировать
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span class="icon-remove me-2"></span>
+                          Удалить
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="js/script.js"></script>
+<script src="js/fastfront.js"></script>
+
+</body>
+</html>
