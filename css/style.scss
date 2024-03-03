@@ -173,6 +173,10 @@ a {
       border-left: 3px solid transparent;
       font-size: 14px;
 
+      &:active{
+        background-color: #2E9F65;
+        color: #fff !important;
+      }
       &:hover {
         color: #2E9F65;
         border-left: 3px solid #2E9F65;
@@ -219,10 +223,9 @@ a {
 
 .default-input {
   height: 40px;
-  top: 215px;
-  left: 1046px;
   border: 1px solid #23232347;
   width: 100%;
+  padding-left: 5px;
 
   input {
     width: 100%;
@@ -292,6 +295,7 @@ a {
 
 .ads-company-row {
   height: calc(100vh - 60px);
+  overflow: auto;
 }
 
 .default-table {
@@ -374,5 +378,123 @@ a {
   }
 }
 
+.exit-navbar{
+  position: relative;
 
+  &:hover{
+    .exit-navbar-body{
+      display: block;
+    }
+  }
+  &-body{
+    position: absolute;
+    width: 133px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    top: calc(100% + 5px);
+    right: -10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    &:before{
+      position: absolute;
+      content: "";
+      height: 8px;
+      width: 8px;
+      background: #fff;
+      top: -3px;
+      right: 15px;
+      transform: translate(-50%) rotate(45deg);
+    }
+
+  }
+}
+
+.btn-danger{
+  padding: 8px 14px;
+  color: #232323CC;
+  background-color: #23232312;
+}
+
+[type="checkbox"] {
+  --hover-background: rgba(46, 159, 101, 0.20);
+  --checkmark-svg: url('../images/icons/check.svg');
+  --indeterminate-svg: url('../images/icons/minous.svg');
+
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  position: relative;
+  cursor: pointer;
+  appearance: none; // disable default browser styles
+  color: currentColor; // use same color as surrounding text
+  border-radius: 4px;
+  border: 1px solid #23232347;
+  background-color: #fff;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -0.75rem;
+    border-radius: 50%;
+    transition: background-color 200ms;
+
+    @media (pointer: coarse) {
+      inset: -1.25rem;
+      --hover-background: transparent;
+    }
+  }
+
+  &:enabled:where(:hover, :focus-visible) {
+    outline-offset: 1px;
+
+    &::before {
+      background-color: var(--hover-background);
+    }
+  }
+
+  &:checked{
+    border: 1px solid #2E9F65;
+    background-color: #2E9F65;
+  }
+
+  &.input-indeterminate{
+    &:indeterminate{
+      border: 1px solid #2E9F65;
+      background-color: #2E9F65;
+    }
+    &:indeterminate::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: 10px;
+      background-color: #fff;
+    }
+
+    &:indeterminate::after {
+      mask-image: var(--indeterminate-svg);
+    }
+  }
+
+  &:checked::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 10px;
+    background-color: #fff;
+  }
+
+  &:checked::after {
+    mask-image: var(--checkmark-svg);
+  }
+}
 

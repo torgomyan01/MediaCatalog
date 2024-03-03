@@ -8,9 +8,11 @@ const {
 
 
 const {
-    selectAllCheckbox
+    selectAllCheckbox,
+    phoneMask
 } = {
-    selectAllCheckbox: document.querySelectorAll('.select-all-table')
+    selectAllCheckbox: document.querySelectorAll('.select-all-table'),
+    phoneMask: document.querySelectorAll('input.input-mask')
 }
 
 selectAllCheckbox?.forEach((item) => {
@@ -30,3 +32,20 @@ selectAllCheckbox?.forEach((item) => {
 
     })
 })
+
+// INOUT MASK PHONE
+
+phoneMask.forEach((item) => {
+    const maskOptions = {
+        mask: '+{7}(000)000-00-00'
+    };
+    IMask(item, maskOptions);
+})
+
+
+const checkboxes = document.querySelectorAll('.input-indeterminate');
+
+checkboxes.forEach((input) => {
+    input.indeterminate = true;
+})
+
