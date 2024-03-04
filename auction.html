@@ -2,8 +2,8 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>-->
+  <!--  <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
   <meta name="theme-color" content="#00CF91">
   <meta name="msapplication-navbutton-color" content="#1D1F23">
   <meta name="apple-mobile-web-app-capable" content="yes"/>
@@ -15,6 +15,8 @@
   <link rel="apple-touch-icon" href="android-chrome-192x192.png">
   <meta name="msapplication-config" content="browserconfig.xml"/>
 
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/multiple-select@1.7.0/dist/multiple-select.min.css">
 
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <!--  ICONS-->
@@ -26,6 +28,9 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/multiple-select@1.7.0/dist/multiple-select.min.js"></script>
+
+
   <title>MediaCatalog</title>
 
 </head>
@@ -64,10 +69,26 @@
           </a>
         </div>
         <div class="d-flex justify-content-start align-items-center">
-          <a href="#" class="main-content-tab active">1 Подбор конструкций</a>
-          <a href="#" class="main-content-tab">2 Параметры кампании</a>
-          <a href="#" class="main-content-tab">3 Макеты</a>
-          <a href="#" class="main-content-tab opacity-25">4 Информация</a>
+          <span class="nav-steps main-content-tab active ">
+            <span class="step-count">1</span>
+            <span class="icon-check fs-14"></span>
+             Подбор конструкций
+          </span>
+          <span class="nav-steps main-content-tab">
+            <span class="step-count">2</span>
+            <span class="icon-check fs-14"></span>
+             Параметры кампании
+          </span>
+          <span class="nav-steps main-content-tab">
+            <span class="step-count">3</span>
+            <span class="icon-check fs-14"></span>
+             Макеты
+          </span>
+          <span class="nav-steps main-content-tab opacity-25">
+            <span class="step-count">4</span>
+            <span class="icon-check fs-14"></span>
+            Информация
+          </span>
         </div>
         <div class="d-flex justify-content-end align-items-center me-3">
           <div class="dropdown balance-dropdown">
@@ -89,121 +110,659 @@
 
 
       <div>
-        <div class="row m-0 ads-company-row">
-          <div class="col-8 pt-19 ps-24 h-100">
-            <h3 class="fs-36 fw-bold mb-3">
-              Рекламные кампании
-            </h3>
+        <div class="row m-0 ads-company-row step-item ">
 
-            <div class="d-flex justify-content-start align-items-center">
-              <label class="default-search">
+          <div class="col-3 pt-19 ps-24 h-100 overflow-y-auto">
+            <div class="select-info">
+              <h3 class="fs-24 fw-bold mb-3">
+                Подбор конструкций
+              </h3>
+              <div class="mt-2 fs-16 c-black-600 d-flex justify-content-start align-items-center">
+                Регион
+                <div class="default-tooltip ms-1">
+                  <span class="default-tooltip-text">Text</span>
+                  <span class="icon-quation-circle fs-14"></span>
+                </div>
+              </div>
+              <label class="default-search mb-4 w-100">
                 <span class="icon-search"></span>
-                <input type="text" placeholder="Название макета">
+                <input type="text" placeholder="Название макета" value="Москва">
               </label>
-
-              <label class="form-check-label ms-3">
-                <input class="form-check-input" type="checkbox" value="">
-                <span class="fs-12">Видео</span>
-              </label>
-              <label class="form-check-label ms-3">
-                <input class="form-check-input" type="checkbox" value="">
-                <span class="fs-12">Макет для диджитал</span>
-              </label>
-              <label class="form-check-label ms-3">
-                <input class="form-check-input" type="checkbox" value="">
-                <span class="fs-12">Макет для печати</span>
-              </label>
-            </div>
-
-            <div class="row mt-5">
-              <div class="col-3">
-                <p class="fs-12 c-black fw-500 h-28">Лазерная резка металла на трассе М11</p>
-                <img src="images/post-2.png" alt="post-image" class="object-fit-cover w-100 h-105">
-                <p class="fs-12 mt-2 ps-2">
-                  <span class="icon-image me-2"></span>
-                  <span class="me-2">1440х720 px</span>
-                  <span>3х6 м</span>
-                </p>
+              <div class="form-check form-switch mb-4">
+                <input class="form-check-input" type="checkbox" role="switch" id="opened-window">
+                <label class="form-check-label c-black fs-16 mb-0" for="opened-window">Доступные экраны</label>
               </div>
-              <div class="col-3">
-                <p class="fs-12 c-black fw-500 h-28">Лазерная резка металла в ТЦ Зима</p>
-                <img src="images/post-1.png" alt="post-image" class="object-fit-cover w-100 h-105">
-                <p class="fs-12 mt-2 ps-2">
-                  <span class="icon-image me-2"></span>
-                  <span class="icon-time me-2"></span>
-                  <span class="me-2">1440х720 px</span>
-                  <span>3х6 м</span>
-                </p>
+              <div class="mt-2 fs-16 c-black-600 d-flex justify-content-start align-items-center">
+                Тип конструкции
+                <div class="default-tooltip ms-1">
+                  <span class="default-tooltip-text">Text</span>
+                  <span class="icon-quation-circle fs-14"></span>
+                </div>
               </div>
-              <div class="col-3">
-                <p class="fs-12 c-black fw-500 h-28">Лазерная резка металла в ТЦ Зима</p>
-                <img src="images/post-1.png" alt="post-image" class="object-fit-cover w-100 h-105">
-                <p class="fs-12 mt-2 ps-2">
-                  <span class="icon-image me-2"></span>
-                  <span class="icon-time me-2"></span>
-                  <span class="me-2">1440х720 px</span>
-                  <span>3х6 м</span>
-                </p>
+              <select multiple="multiple" class="mb-10">
+                <option value="2" selected>Наружная реклама</option>
+                <option value="2">Билборды</option>
+                <option value="3">Брандмауэры</option>
+                <option value="4">Остановки</option>
+                <option value="5">Медиафасады</option>
+                <option value="6">Ситиборды</option>
+                <option value="7">Ситиформаты</option>
+                <option value="8">Остановки</option>
+                <option value="3">Брандмауэры</option>
+                <option value="4">Остановки</option>
+                <option value="5">Медиафасады</option>
+                <option value="6">Ситиборды</option>
+                <option value="7">Ситиформаты</option>
+                <option value="8">Остановки</option>
+              </select>
+              <select multiple="multiple" class="mb-10">
+                <option value="2" selected>Indoor-реклама</option>
+                <option value="2">Билборды</option>
+                <option value="3">Брандмауэры</option>
+                <option value="4">Остановки</option>
+                <option value="5">Медиафасады</option>
+                <option value="6">Ситиборды</option>
+                <option value="7">Ситиформаты</option>
+                <option value="8">Остановки</option>
+                <option value="3">Брандмауэры</option>
+                <option value="4">Остановки</option>
+                <option value="5">Медиафасады</option>
+                <option value="6">Ситиборды</option>
+                <option value="7">Ситиформаты</option>
+                <option value="8">Остановки</option>
+              </select>
+              <select multiple="multiple" class="mb-10">
+                <option value="2" selected>Транзитная реклама</option>
+                <option value="2">Билборды</option>
+                <option value="3">Брандмауэры</option>
+                <option value="4">Остановки</option>
+                <option value="5">Медиафасады</option>
+                <option value="6">Ситиборды</option>
+                <option value="7">Ситиформаты</option>
+                <option value="8">Остановки</option>
+                <option value="3">Брандмауэры</option>
+                <option value="4">Остановки</option>
+                <option value="5">Медиафасады</option>
+                <option value="6">Ситиборды</option>
+                <option value="7">Ситиформаты</option>
+                <option value="8">Остановки</option>
+              </select>
+              <div class="mt-2 fs-16 c-black-600 d-flex justify-content-start align-items-center">
+                Тип контента
+                <div class="default-tooltip ms-1">
+                  <span class="default-tooltip-text">Text</span>
+                  <span class="icon-quation-circle fs-14"></span>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col-4 border-left h-100">
-            <h4 class="fs-16 mt-85 c-black fw-bold">
-              Загрузить макет
-            </h4>
-
-            <label class="default-input w-288 mt-42">
-              <input type="text" placeholder="Название макета">
-            </label>
-
-            <div class="mt-24">
-              <label class="default-range">
-                <input type="radio" class="d-none" name="select-type">
-                <span></span>
-                Видео
-              </label>
-              <label class="default-range mt-10">
-                <input type="radio" class="d-none"  name="select-type">
-                <span></span>
-                Макет для диджитал
-              </label>
-              <label class="default-range mt-10">
-                <input type="radio" class="d-none" name="select-type">
-                <span></span>
-                Макет для печати
-              </label>
-            </div>
-
-
-            <div class="upload-design mt-24">
-              <p class="c-black-600 fs-14 text-center mb-0">
-                Перетащите файлы сюда или нажмите
-                на кнопку
-              </p>
-              <p class="fs-12 c-black-400 text-center ">
-                Поддерживаемые форматы: MP4, PNG, JPG
-              </p>
-
-              <div class="d-flex justify-content-center align-items-center">
-                <label class="w-159 h-32 d-flex justify-content-center align-items-center bgc-black-100 fs-14 c-black-800 br-5">
-                  <input type="file" class="d-none">
-                  <span class="icon-file me-1"></span>
-                  Загрузить файл
+              <div class="d-flex justify-content-start align-items-center mt-3 flex-wrap">
+                <label class="c-black fs-16 d-flex justify-content-start align-items-center me-3">
+                  <input type="checkbox" class="default-checkbox me-2" checked id="static-checkbox">
+                  Статичный
+                </label>
+                <label class="c-black fs-16 d-flex justify-content-start align-items-center">
+                  <input type="checkbox" class="default-checkbox me-2" checked>
+                  Динамичный
                 </label>
               </div>
             </div>
+            <div class="billboard position-relative d-none">
 
-            <p class="c-black fs-14 mt-4">
-              Сопроводительные документы
-            </p>
-            <label class="w-159 h-32 d-flex justify-content-center align-items-center bgc-black-100 fs-14 c-black-800 br-5">
-              <input type="file" class="d-none">
-              <span class="icon-file me-1"></span>
-              Загрузить файл
-            </label>
+              <span class="icon-close position-absolute right-10 top-10 cursor-pointer fs-12 c-black"
+                    id="close-select-info"></span>
 
-            <div class="mt-4 text-center" data-bs-toggle="modal" data-bs-target="#upload">
-              <button class="green-btn">Загрузить</button>
+              <h4 class="fw-bold fs-24 mb-2 c-black">Билборд</h4>
+              <p class="fs-12 c-black mb-3">
+                Москва, Сахарова Академика пр-т.
+              </p>
+
+              <div class="accordion mb-3" id="accordionExample">
+                <div class="accordion-item billboard-accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Сторона A1-A10
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <div class="mb-3">
+                        <div class="fs-12 d-flex justify-content-start align-items-center">
+                          <b class="me-2">id 81250</b>
+                          <span class="icon-image me-2"></span>
+                          <span class="icon-video me-2"></span>
+                          <span class="icon-time me-2"></span>
+                          5, 7, 10 сек
+                        </div>
+                        <div class="row mt-2">
+                          <div class="col-6">
+                            <img src="images/billboard.png" alt="billboard" class="w-100 object-fit-cover">
+                          </div>
+                          <div class="col-6 ps-0">
+                            <div class="fs-14 c-black d-flex justify-content-start align-items-center mb-2">
+                              GRP: 0,64
+                              <div class="default-tooltip m-0 ms-2">
+                                <span class="default-tooltip-text">Text</span>
+                                <span class="icon-quation-circle fs-14 c-black-600"></span>
+                              </div>
+                            </div>
+                            <div class="fs-14 c-black d-flex justify-content-start align-items-center mb-2">
+                              OTS: 50,9
+                              <div class="default-tooltip m-0 ms-2">
+                                <span class="default-tooltip-text">Text</span>
+                                <span class="icon-quation-circle fs-14 c-black-600"></span>
+                              </div>
+                            </div>
+                            <div class="fs-14 c-black d-flex justify-content-start align-items-center text-nowrap">
+                              Мин. ставка: 0,12 ₽
+                              <div class="default-tooltip m-0 ms-2">
+                                <span class="default-tooltip-text">Text</span>
+                                <span class="icon-quation-circle fs-14 c-black-600"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="d-flex justify-content-center align-items-center mb-3">
+                        <button
+                            class="btn-outline-success fs-16 px-3 py-2 bgc-white !bc-green border c-green select-action">
+                          Выбрать
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion mb-3">
+                <div class="accordion-item billboard-accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                      Сторона A1-A10
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                      <div class="mb-3">
+                        <div class="fs-12 d-flex justify-content-start align-items-center">
+                          <b class="me-2">id 81250</b>
+                          <span class="icon-image me-2"></span>
+                          <span class="icon-video me-2"></span>
+                          <span class="icon-time me-2"></span>
+                          5, 7, 10 сек
+                        </div>
+                        <div class="row mt-2">
+                          <div class="col-6">
+                            <img src="images/billboard.png" alt="billboard" class="w-100 object-fit-cover">
+                          </div>
+                          <div class="col-6 ps-0">
+                            <div class="fs-14 c-black d-flex justify-content-start align-items-center mb-2">
+                              GRP: 0,64
+                              <div class="default-tooltip m-0 ms-2">
+                                <span class="default-tooltip-text">Text</span>
+                                <span class="icon-quation-circle fs-14 c-black-600"></span>
+                              </div>
+                            </div>
+                            <div class="fs-14 c-black d-flex justify-content-start align-items-center mb-2">
+                              OTS: 50,9
+                              <div class="default-tooltip m-0 ms-2">
+                                <span class="default-tooltip-text">Text</span>
+                                <span class="icon-quation-circle fs-14 c-black-600"></span>
+                              </div>
+                            </div>
+                            <div class="fs-14 c-black d-flex justify-content-start align-items-center text-nowrap">
+                              Мин. ставка: 0,12 ₽
+                              <div class="default-tooltip m-0 ms-2">
+                                <span class="default-tooltip-text">Text</span>
+                                <span class="icon-quation-circle fs-14 c-black-600"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <div class="fs-12 d-flex justify-content-start align-items-center">
+                          <b class="me-2">id 81250</b>
+                          <span class="icon-image me-2"></span>
+                          <span class="icon-video me-2"></span>
+                          <span class="icon-time me-2"></span>
+                          5, 7, 10 сек
+                        </div>
+                        <div class="row mt-2">
+                          <div class="col-6">
+                            <img src="images/billboard.png" alt="billboard" class="w-100 object-fit-cover">
+                          </div>
+                          <div class="col-6 ps-0">
+                            <div class="fs-14 c-black d-flex justify-content-start align-items-center mb-2">
+                              GRP: 0,64
+                              <div class="default-tooltip m-0 ms-2">
+                                <span class="default-tooltip-text">Text</span>
+                                <span class="icon-quation-circle fs-14 c-black-600"></span>
+                              </div>
+                            </div>
+                            <div class="fs-14 c-black d-flex justify-content-start align-items-center mb-2">
+                              OTS: 50,9
+                              <div class="default-tooltip m-0 ms-2">
+                                <span class="default-tooltip-text">Text</span>
+                                <span class="icon-quation-circle fs-14 c-black-600"></span>
+                              </div>
+                            </div>
+                            <div class="fs-14 c-black d-flex justify-content-start align-items-center text-nowrap">
+                              Мин. ставка: 0,12 ₽
+                              <div class="default-tooltip m-0 ms-2">
+                                <span class="default-tooltip-text">Text</span>
+                                <span class="icon-quation-circle fs-14 c-black-600"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="d-flex justify-content-center align-items-center mb-3">
+                        <button
+                            class="btn-outline-success fs-16 px-3 py-2 bgc-white !bc-green border c-green select-action">
+                          Выбрать
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+          <div class="col-9 border-left h-100 pt-10 overflow-y-auto">
+            <h3 class="fs-36 fw-bold c-black mb-3">
+              Аукцион
+            </h3>
+            <!--            IFRAME MAP NOW THIS IMAGES-->
+            <img src="images/map-1.png" alt="auction map" class="map-image w-100 object-fit-cover">
+            <img src="images/map-2.png" alt="auction map" class="map-image w-100 object-fit-cover d-none">
+            <img src="images/map-3.png" alt="auction map"
+                 class="map-image map-image-3 w-100 object-fit-cover d-none cursor-pointer">
+            <!--            IFRAME MAP NOW THIS IMAGES-->
+
+            <table class="default-table mt-4 w-100">
+              <tbody>
+              <tr>
+                <th>
+                  <div>
+                    <label class="form-check-label fw-bold d-flex align-items-center justify-content-start">
+                      <input class="form-check-input mt-0 select-all-table" type="checkbox" value="" id="tableId_76">
+                      <span class="fs-12">ID</span>
+                    </label>
+                  </div>
+                </th>
+                <th>
+                  <div class="fs-12">
+                    Адрес
+                  </div>
+                </th>
+                <th>
+                  <div class="fs-12">
+                    Тип
+                  </div>
+                </th>
+                <th>
+                  <div class="fs-12">
+                    Сторона
+                  </div>
+                </th>
+                <th>
+                  <div class="fs-12 d-flex justify-content-between">
+                    GRP
+                    <span class="icon-filter me-2 c-green cursor-pointer"></span>
+                  </div>
+                </th>
+                <th>
+                  <div class="fs-12">
+                    OTS
+                  </div>
+                </th>
+                <th>
+                  <div class="fs-12">
+                    Мин. ставка
+                  </div>
+                </th>
+                <th>
+                  <div class="fs-12">
+                    Тип контента
+                  </div>
+                </th>
+                <th width="42"></th>
+              </tr>
+              <tr class="d-none" id="one-row-action-table">
+                <td>
+                  <label class="form-check-label d-flex align-items-center justify-content-start">
+                    <input class="form-check-input mt-0" type="checkbox" value="">
+                    <span class="fs-12">81250</span>
+                  </label>
+                </td>
+                <td>
+                  <div class="fs-12 c-black">
+                    Москва, Сахарова Академика пр-т.
+                  </div>
+                </td>
+                <td>
+                  <div class="fs-12 c-black d-flex justify-content-between align-items-center">
+                    Билборд
+                    <span class="icon-image"></span>
+                  </div>
+                </td>
+                <td>
+                  <div class="fs-12 c-black">
+                    A1-A10
+                  </div>
+                </td>
+                <td>
+                  <div class="fs-12 c-black">
+                    0.69
+                  </div>
+                </td>
+                <td>
+                  <div class="fs-12 c-black">
+                    50.34
+                  </div>
+                </td>
+                <td>
+                  <div class="fs-12 c-black">
+                    0,12 ₽
+                  </div>
+                </td>
+                <td>
+                  <div class="fs-12 c-black d-flex justify-content-center align-items-center">
+                    <span class="icon-image me-3"></span>
+                    <span class="icon-video"></span>
+                  </div>
+                </td>
+                <td>
+                  <div class="c-black d-flex justify-content-center align-items-center">
+                    <span class="icon-remove fs-16 cursor-pointer"></span>
+                  </div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+
+            <div class="d-flex justify-content-end align-items-center mt-3 mb-5">
+              <button
+                  class="btn-outline-success fs-16 px-3 py-2 bgc-white !bc-green border c-green select-action opacity-25 step-menu"
+                  disabled data-step="1" id="btn-next">
+                Далее
+                <span class="icon-right ms-2"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row m-0 ads-company-row step-item d-none">
+          <div class="col-3 pt-19 ps-24 h-100 overflow-y-auto">
+            <div>
+              <h4 class="fw-bold fs-24 mb-5 c-black">Параметры кампании</h4>
+
+
+              <label class="d-block mb-3">
+                <span class="fs-16 lh-24 c-black-600 mb-1 d-block">Название кампании</span>
+                <input type="text" class="default-input" value="Аукцион_23967">
+              </label>
+
+              <label class="d-block">
+                <span class="fs-16 lh-24 c-black-600 mb-1 d-block">Даты проведения</span>
+              </label>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <input type="date" class="default-input w-50 border-end-0 pe-2">
+                <input type="date" class="default-input w-50 pe-2" placeholder="Финиш">
+              </div>
+
+
+              <div>
+                <div class="fs-16 c-black-600 d-flex justify-content-start align-items-center mb-2">
+                  График показа
+                  <div class="default-tooltip m-0 ms-1">
+                    <span class="default-tooltip-text">Text</span>
+                    <span class="icon-quation-circle fs-14 c-black-600"></span>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-start align-items-center mb-3">
+                  <button class="btn-outline-success fs-16 px-3 py-2 bgc-white !bc-green border c-green select-action">
+                    <span class="icon-calendar me-2"></span>
+                    Выбрать
+                  </button>
+                </div>
+
+                <label class="d-block mb-3">
+                  <span class="fs-16 c-black-600 d-flex justify-content-start align-items-center mb-2">
+                    Интервал между показами, сек
+                    <span class="default-tooltip m-0 ms-1">
+                      <span class="default-tooltip-text">Text</span>
+                      <span class="icon-quation-circle fs-14 c-black-600"></span>
+                    </span>
+                  </span>
+                  <input type="text" class="default-input" value="0">
+                </label>
+
+                <label class="d-block mb-3">
+                  <span class="fs-16 lh-24 c-black-600 mb-1 d-block">Бюджет на рекламу, ₽</span>
+                  <input type="text" class="default-input" value="0">
+                </label>
+                <label class="d-block mb-3">
+                  <span class="fs-16 lh-24 c-black-600 mb-1 d-block">Суточный лимит, ₽ </span>
+                  <input type="text" class="default-input" value="0">
+                </label>
+
+                <label class="c-black fs-16 d-flex justify-content-start align-items-center mb-40">
+                  <input type="checkbox" class="default-checkbox me-2" checked="">
+                  Равномерное распределение
+                </label>
+                <div class="form-check form-switch mb-4">
+                  <input class="form-check-input" type="checkbox" role="switch" id="uniform-distribution">
+                  <label class="form-check-label c-black fs-16 mb-0 !c-black-400" for="uniform-distribution">
+                    Автоматическое управление ставками
+                  </label>
+                </div>
+
+                <div class="fs-16 c-black-600 d-flex justify-content-start align-items-center mb-2">
+                  Ставка, ₽
+                  <div class="default-tooltip m-0 ms-1">
+                    <span class="default-tooltip-text">Text</span>
+                    <span class="icon-quation-circle fs-14 c-black-600"></span>
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center">
+                  <label class="d-block mb-3">
+                    <span class="fs-16 c-black-600 d-flex justify-content-start align-items-center mb-2">
+                      День
+                      <span class="default-tooltip m-0 ms-1">
+                        <span class="default-tooltip-text">Text</span>
+                        <span class="icon-quation-circle fs-14 c-black-600"></span>
+                      </span>
+                    </span>
+                    <input type="text" class="default-input" value="0">
+                  </label>
+                  <label class="d-block mb-3 mx-3">
+                  <span class="fs-16 c-black-600 d-flex justify-content-start align-items-center mb-2">
+                    Час пик
+                    <span class="default-tooltip m-0 ms-1">
+                      <span class="default-tooltip-text">Text</span>
+                      <span class="icon-quation-circle fs-14 c-black-600"></span>
+                    </span>
+                  </span>
+                    <input type="text" class="default-input" value="0">
+                  </label>
+                  <label class="d-block mb-3">
+                    <span class="fs-16 c-black-600 d-flex justify-content-start align-items-center mb-2">
+                      Ночь
+                      <span class="default-tooltip m-0 ms-1">
+                        <span class="default-tooltip-text">Text</span>
+                        <span class="icon-quation-circle fs-14 c-black-600"></span>
+                      </span>
+                    </span>
+                    <input type="text" class="default-input" value="0">
+                  </label>
+                </div>
+
+                <div class="d-flex justify-content-end align-items-center fs-12 c-black-600 mb-3 cursor-pointer">
+                  <span class="icon-left me-2"></span>
+                  Скрыть параметры
+                </div>
+
+
+              </div>
+
+
+            </div>
+          </div>
+
+          <div class="col-9 border-left h-100 pt-10 overflow-y-auto">
+            <h3 class="fs-36 fw-bold c-black mb-3">
+              Аукцион
+            </h3>
+
+            <div class="d-flex justify-content-between align-items-center">
+              <b class="c-black fs-16">Конструкции</b>
+              <span class="c-black-500 fs-12">
+                Показать карту
+                <span class="icon-top ms-2"></span>
+              </span>
+            </div>
+
+            <table class="default-table mt-4 w-100">
+              <tbody>
+              <tr>
+                <th rowspan="2" class="h-auto">
+                  <div>
+                    <label class="form-check-label fw-bold d-flex align-items-center justify-content-start">
+                      <input class="form-check-input mt-0 select-all-table" type="checkbox" value="" id="tableId_76">
+                      <span class="fs-12">ID</span>
+                    </label>
+                  </div>
+                </th>
+                <th rowspan="2" class="h-auto">
+                  <div class="fs-12">
+                    Адрес
+                  </div>
+                </th>
+                <th rowspan="2" class="h-auto">
+                  <div class="fs-12">
+                    Тип
+                  </div>
+                </th>
+                <th rowspan="2" class="h-auto">
+                  <div class="fs-12">
+                    Сторона
+                  </div>
+                </th>
+                <th rowspan="2" class="h-auto">
+                  <div class="fs-12">
+                    Интервал
+                  </div>
+                </th>
+                <th rowspan="2" class="h-auto">
+                  <div class="fs-12">
+                    Бюджет/показы
+                  </div>
+                </th>
+                <th rowspan="1" colspan="4" class="!h-32">
+                  <div class="fs-12 text-center">
+                    Ставка
+                  </div>
+                </th>
+              </tr>
+              <tr>
+                <th class="!h-30 fs-12 c-black">
+                  Мин
+                </th>
+                <th class="!h-30 fs-12 c-black">
+                  День
+                </th>
+                <th class="!h-30 fs-12 c-black">
+                  Час пик
+                </th>
+                <th class="!h-30 fs-12 c-black">
+                  Ночь
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <label class="form-check-label d-flex align-items-center justify-content-start">
+                    <input class="form-check-input mt-0" type="checkbox" value="">
+                    <span class="fs-12">81250</span>
+                  </label>
+                </td>
+                <td width="180">
+                  <div class="fs-12 c-black">
+                    Москва, Сахарова Академика пр-т.
+                  </div>
+                </td>
+                <td>
+                  <div class="fs-12 c-black d-flex justify-content-between align-items-center">
+                    Билборд <br>
+                    3х6 м
+                    <span class="icon-image"></span>
+                  </div>
+                </td>
+                <td>
+                  <div class="fs-12 c-black">
+                    A1-A10
+                  </div>
+                </td>
+                <td>
+                  <div class="fs-12 c-black">
+                    <input type="text" class="default-input w-74" value="0">
+                  </div>
+                </td>
+                <td>
+                  <div class="fs-12 c-black">
+                    <label class="default-range min mb-2">
+                      <input type="radio" class="d-none" name="select-type">
+                      <span></span>
+                      Мин бюджет
+                    </label>
+                    <label class="default-range min">
+                      <input type="radio" class="d-none" name="select-type">
+                      <span></span>
+                      Макс показов
+                    </label>
+                  </div>
+                </td>
+                <td>
+                  <div class="fs-12 c-black">
+                    0,12 ₽
+                  </div>
+                </td>
+                <td>
+                  <div class="fs-12 c-black d-flex justify-content-center align-items-center">
+                    <input type="text" class="default-input w-57" value="0">
+                  </div>
+                </td>
+                <td>
+                  <div class="c-black d-flex justify-content-center align-items-center">
+                    <input type="text" class="default-input w-57" value="0">
+                  </div>
+                </td>
+                <td>
+                  <div class="c-black d-flex justify-content-center align-items-center">
+                    <input type="text" class="default-input w-57" value="0">
+                  </div>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+
+
+            <div class="d-flex justify-content-end align-items-center mt-3 mb-5">
+              <a href="#" class="fs-16 c-black-600 me-4 d-flex justify-content-end align-items-center">
+                <span class="icon-plus me-2"></span>
+                Добавить конструкцию
+              </a>
+              <button
+                  class="btn-outline-success fs-16 px-3 py-2 bgc-white !bc-green border c-green select-action opacity-25"
+                  disabled>
+                Далее
+                <span class="icon-right ms-2"></span>
+              </button>
             </div>
           </div>
         </div>

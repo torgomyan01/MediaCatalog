@@ -28,8 +28,8 @@ Object.keys(colors).forEach((key) => {
         if(index){
             const count = index * 100;
             const newCey =  `${key}-${count}`;
-            colorsHead.innerHTML = `${colorsHead.innerHTML} .c-${newCey} {color: ${colour(color, index)}}`;
-            colorsHead.innerHTML = `${colorsHead.innerHTML} .bgc-${newCey} {background-color: ${colour(color, index)}}`;
+            colorsHead.innerHTML = `${colorsHead.innerHTML} .c-${newCey} {color: ${colour(color, index)} !important}`;
+            colorsHead.innerHTML = `${colorsHead.innerHTML} .bgc-${newCey} {background-color: ${colour(color, index)} !important}`;
         }
     })
 })
