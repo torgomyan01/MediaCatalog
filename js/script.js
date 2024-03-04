@@ -137,13 +137,26 @@ $('.step-menu').on('click', function (e){
             item.classList.add('active')
         }
     })
-    // stepItem.forEach((item, i) => {
-    //     if(i === index){
-    //         $(item).removeClass(none);
-    //     } else{
-    //         $(item).addClass(none);
-    //     }
-    // })
+
 })
+
+const oneDay = Array.from({length: 24}).map(() => true);
+
+const monthChecking = Array.from({length: 7}).map(() => oneDay)
+
+console.log(monthChecking)
+
+monthChecking.forEach((item) => {
+    $('#monty-body').append(`
+      <div class="d-flex justify-content-between align-items-center gap-10">
+        ${createRow(item)}
+      </div>
+    `)
+})
+
+function createRow(item){
+    return item.map((box) => `<label class="mt-1"><input type="checkbox" class="default-checkbox" checked="${box}"></label>`).join('')
+}
+
 
 

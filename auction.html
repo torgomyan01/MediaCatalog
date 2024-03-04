@@ -525,7 +525,7 @@
                   </div>
                 </div>
                 <div class="d-flex justify-content-start align-items-center mb-3">
-                  <button class="btn-outline-success fs-16 px-3 py-2 bgc-white !bc-green border c-green select-action">
+                  <button class="btn-outline-success fs-16 px-3 py-2 bgc-white !bc-green border c-green select-action" data-bs-toggle="modal" data-bs-target="#select-time">
                     <span class="icon-calendar me-2"></span>
                     Выбрать
                   </button>
@@ -634,7 +634,7 @@
                 <th rowspan="2" class="h-auto">
                   <div>
                     <label class="form-check-label fw-bold d-flex align-items-center justify-content-start">
-                      <input class="form-check-input mt-0 select-all-table" type="checkbox" value="" id="tableId_76">
+                      <input class="form-check-input mt-0 select-all-table" type="checkbox" value="">
                       <span class="fs-12">ID</span>
                     </label>
                   </div>
@@ -772,25 +772,156 @@
 
 
   <!-- Modal -->
-  <div class="modal fade" id="upload" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="select-time" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content border-0">
         <div class="modal-header border-0">
           <button type="button" class="btn-close mt-3 me-3" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body pb-5 pt-3">
-          <div class="d-flex justify-content-center align-items-center">
-            <div class="w-500">
-              <h3 class="fs-18 mb-4">
-                Загрузка макета <span class="c-red">1440х820 px</span> прошла успешно!
-              </h3>
-              <p class="mb-0">
-                Дополнительно были созданы форматы:
-              </p>
-              <p class="c-red">
-                768х424 px
-              </p>
+        <div class="modal-body p-5 pt-0">
+          <div class="d-flex justify-content-start align-items-center mb-4">
+            <span class="c-green fs-14 me-3 cursor-pointer">Снять все выделение</span>
+            <span class="c-green fs-14 me-3 cursor-pointer">День</span>
+            <span class="c-green fs-14 me-3 cursor-pointer">Час пик</span>
+            <span class="c-green fs-14 me-3 cursor-pointer">Ночь</span>
+          </div>
+
+          <div class="d-flex justify-content-start align-items-start">
+            <div class="me-3">
+              <label class="c-black fs-16 d-flex justify-content-start align-items-center mb-1">
+                <input type="checkbox" class="default-checkbox me-2" checked="">
+                Пн
+              </label>
+              <label class="c-black fs-16 d-flex justify-content-start align-items-center mb-1">
+                <input type="checkbox" class="default-checkbox me-2" checked="">
+                Вт
+              </label>
+              <label class="c-black fs-16 d-flex justify-content-start align-items-center mb-1">
+                <input type="checkbox" class="default-checkbox me-2" checked="">
+                Ср
+              </label>
+              <label class="c-black fs-16 d-flex justify-content-start align-items-center mb-1">
+                <input type="checkbox" class="default-checkbox me-2" checked="">
+                Чт
+              </label>
+              <label class="c-black fs-16 d-flex justify-content-start align-items-center mb-1">
+                <input type="checkbox" class="default-checkbox me-2" checked="">
+                Пт
+              </label>
+              <label class="c-black fs-16 d-flex justify-content-start align-items-center mb-1">
+                <input type="checkbox" class="default-checkbox me-2" checked="">
+                Сб
+              </label>
+              <label class="c-black fs-16 d-flex justify-content-start align-items-center mb-1">
+                <input type="checkbox" class="default-checkbox me-2" checked="">
+                Вс
+              </label>
             </div>
+            <div id="monty-body"></div>
+          </div>
+          <div id="month-time" class="d-flex justify-content-start align-items-start ps-61">
+            <label class="month-time-item">
+                <span>00-01</span>
+              <input type="checkbox" class="default-checkbox me-2" checked="">
+            </label>
+            <label class="month-time-item">
+                <span>01-02</span>
+              <input type="checkbox" class="default-checkbox me-2" checked="">
+            </label>
+            <label class="month-time-item">
+                <span>02-03</span>
+              <input type="checkbox" class="default-checkbox me-2" checked="">
+            </label>
+            <label class="month-time-item">
+                <span>03-04</span>
+              <input type="checkbox" class="default-checkbox me-2" checked="">
+            </label>
+            <label class="month-time-item">
+                <span>04-05</span>
+              <input type="checkbox" class="default-checkbox me-2" checked="">
+            </label>
+            <label class="month-time-item">
+                <span>05-06</span>
+              <input type="checkbox" class="default-checkbox me-2" checked="">
+            </label>
+            <label class="month-time-item">
+                <span>06-07</span>
+              <input type="checkbox" class="default-checkbox me-2" checked="">
+            </label>
+            <label class="month-time-item">
+                <span>07-08</span>
+              <input type="checkbox" class="default-checkbox me-2" checked="">
+            </label>
+            <label class="month-time-item">
+                <span>08-09</span>
+              <input type="checkbox" class="default-checkbox me-2" checked="">
+            </label>
+            <label class="month-time-item">
+                <span>09-10</span>
+              <input type="checkbox" class="default-checkbox me-2" checked="">
+            </label>
+            <label class="month-time-item">
+                <span>10-11</span>
+              <input type="checkbox" class="default-checkbox me-2" checked="">
+            </label>
+            <label class="month-time-item">
+                <span>11-12</span>
+              <input type="checkbox" class="default-checkbox me-2" checked="">
+            </label>
+            <label class="month-time-item">
+                <span>12-13</span>
+              <input type="checkbox" class="default-checkbox me-2" checked="">
+            </label>
+            <label class="month-time-item">
+                <span>13-14</span>
+              <input type="checkbox" class="default-checkbox me-2" checked="">
+            </label>
+            <label class="month-time-item">
+                <span>14-15</span>
+              <input type="checkbox" class="default-checkbox me-2" checked="">
+            </label>
+            <label class="month-time-item">
+                <span>15-16</span>
+              <input type="checkbox" class="default-checkbox me-2" checked="">
+            </label>
+            <label class="month-time-item">
+                <span>16-17</span>
+              <input type="checkbox" class="default-checkbox me-2" checked="">
+            </label>
+            <label class="month-time-item">
+                <span>17-18</span>
+              <input type="checkbox" class="default-checkbox me-2" checked="">
+            </label>
+            <label class="month-time-item">
+                <span>18-19</span>
+              <input type="checkbox" class="default-checkbox me-2" checked="">
+            </label>
+            <label class="month-time-item">
+                <span>19-20</span>
+              <input type="checkbox" class="default-checkbox me-2" checked="">
+            </label>
+            <label class="month-time-item">
+                <span>20-21</span>
+              <input type="checkbox" class="default-checkbox me-2" checked="">
+            </label>
+            <label class="month-time-item">
+                <span>21-22</span>
+              <input type="checkbox" class="default-checkbox me-2" checked="">
+            </label>
+            <label class="month-time-item">
+                <span>22-23</span>
+              <input type="checkbox" class="default-checkbox me-2" checked="">
+            </label>
+            <label class="month-time-item">
+                <span>23-00</span>
+              <input type="checkbox" class="default-checkbox me-2" checked="">
+            </label>
+          </div>
+          <div class="d-flex justify-content-center align-items-center mt-4">
+            <button
+                class="btn-outline-success fs-16 px-3 py-2 bgc-white !bc-green border c-green">
+              Применить
+            </button>
           </div>
         </div>
       </div>

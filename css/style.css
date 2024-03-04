@@ -552,4 +552,18 @@ a {
   border-radius: 0;
 }
 
+.month-time-item {
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  flex-direction: column;
+  margin-right: 10px;
+  height: 75px;
+  width: 16px;
+}
+.month-time-item span {
+  white-space: nowrap;
+  transform: rotate(-90deg) translate(15px, -14px);
+}
+
 /*# sourceMappingURL=style.css.map */
