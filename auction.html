@@ -111,7 +111,7 @@
 
 
       <div>
-        <div class="row m-0 ads-company-row step-item ">
+        <div class="row m-0 ads-company-row step-item d-none">
 
           <div class="col-3 pt-19 ps-24 h-100 overflow-y-auto">
             <div class="select-info">
@@ -521,7 +521,7 @@
                 <div class="fs-16 c-black-600 d-flex justify-content-start align-items-center mb-2">
                   График показа
                   <div class="default-tooltip m-0 ms-1">
-                    <span class="default-tooltip-text">Text</span>
+                    <span class="default-tooltip-text">Выбор дней недели и часов для показа рекламного сообщения.</span>
                     <span class="icon-quation-circle fs-14 c-black-600"></span>
                   </div>
                 </div>
@@ -536,7 +536,7 @@
                   <span class="fs-16 c-black-600 d-flex justify-content-start align-items-center mb-2">
                     Интервал между показами, сек
                     <span class="default-tooltip m-0 ms-1">
-                      <span class="default-tooltip-text">Text</span>
+                      <span class="default-tooltip-text">Минимальный интервал между показами рекламного сообщения на одной поверхности.</span>
                       <span class="icon-quation-circle fs-14 c-black-600"></span>
                     </span>
                   </span>
@@ -566,7 +566,7 @@
                 <div class="fs-16 c-black-600 d-flex justify-content-start align-items-center mb-2">
                   Ставка, ₽
                   <div class="default-tooltip m-0 ms-1">
-                    <span class="default-tooltip-text">Text</span>
+                    <span class="default-tooltip-text">Рекламное сообщение будет отображаться в выбранные часы, если ваша ставка окажется выше, чем у конкурентов.</span>
                     <span class="icon-quation-circle fs-14 c-black-600"></span>
                   </div>
                 </div>
@@ -576,7 +576,7 @@
                     <span class="fs-16 c-black-600 d-flex justify-content-start align-items-center mb-2">
                       День
                       <span class="default-tooltip m-0 ms-1">
-                        <span class="default-tooltip-text">Text</span>
+                        <span class="default-tooltip-text">День с 6:00 до 8:00, с 11:00 до 17:00, с 20:00 до 24:00</span>
                         <span class="icon-quation-circle fs-14 c-black-600"></span>
                       </span>
                     </span>
@@ -586,7 +586,7 @@
                   <span class="fs-16 c-black-600 d-flex justify-content-start align-items-center mb-2">
                     Час пик
                     <span class="default-tooltip m-0 ms-1">
-                      <span class="default-tooltip-text">Text</span>
+                      <span class="default-tooltip-text">Час пик с 8:00 до 11:00, с 17:00 до 20:00</span>
                       <span class="icon-quation-circle fs-14 c-black-600"></span>
                     </span>
                   </span>
@@ -596,7 +596,7 @@
                     <span class="fs-16 c-black-600 d-flex justify-content-start align-items-center mb-2">
                       Ночь
                       <span class="default-tooltip m-0 ms-1">
-                        <span class="default-tooltip-text">Text</span>
+                        <span class="default-tooltip-text">Ночь с 00:00 до 06:00</span>
                         <span class="icon-quation-circle fs-14 c-black-600"></span>
                       </span>
                     </span>
@@ -759,11 +759,165 @@
                 Добавить конструкцию
               </a>
               <button
-                  class="btn-outline-success fs-16 px-3 py-2 bgc-white !bc-green border c-green select-action opacity-25"
-                  disabled>
+                  class="btn-outline-success fs-16 px-3 py-2 bgc-white !bc-green border c-green select-action opacity-25 step-menu" data-step="2">
                 Далее
                 <span class="icon-right ms-2"></span>
               </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="ads-company-row step-item ps-25">
+          <h3 class="fs-36 fw-bold c-black mb-3">
+            Аукцион
+          </h3>
+          <p class="fw-bold c-black">
+            Макеты
+          </p>
+
+
+          <div class="design-tab">
+            <div class="design-tab-body">
+              <div class="design-tab-item">
+                <span class="icon-down-solid fs-12 mx-3 cursor-pointer openClose-design-tab"></span>
+                1440x720 px
+                <span class="icon-image mx-3"></span>
+                <span class="icon-video"></span>
+
+                <span class="solid"></span>
+
+                <span class="icon-time mx-3"></span>
+                10 сек
+
+                <span class="solid"></span>
+                <span class="icon-map mx-3"></span>
+                1
+                <span class="solid me-0"></span>
+                <img src="images/post-2.png" alt="image" width="85">
+
+                <a href="#" class="c-green">
+                  <span class="icon-upload ms-3 me-2"></span>
+                  Заменить макет
+                </a>
+
+                <span class="solid"></span>
+
+                <a href="#" class="c-green">
+                  <span class="icon-two-check ms-3 me-2"></span>
+                  Одобрено
+                </a>
+
+                <span class="solid"></span>
+
+                <span class="icon-remove mx-3 cursor-pointer"></span>
+              </div>
+
+              <div class="design-tab-item design-tab-item-body ms-3 fs-12">
+                946255
+                <span class="solid none"></span>
+
+                <div class="w-167">
+                  Москва, Звенигородское ш. Х 2-й Силикатный пр-зд., д.9, стр. 5
+                </div>
+
+                <span class="solid none"></span>
+                Сторона: А1
+
+                <span class="solid none"></span>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="uniform-design-tab-item-1">
+                  <label class="form-check-label c-black fs-16 mb-0 c-black-400" for="uniform-design-tab-item-1">
+                    Вкл/выкл
+                  </label>
+                </div>
+
+                <a href="#" class="c-green fs-14">
+                  <span class="icon-upload ms-3 me-2"></span>
+                  Заменить макет
+                </a>
+
+                <span class="solid transformed"></span>
+
+                <a href="#" class="c-green fs-14">
+                  <span class="icon-two-check ms-3 me-2"></span>
+                  Одобрено
+                </a>
+
+                <span class="solid"></span>
+
+                <span class="icon-remove mx-3 cursor-pointer fs-14"></span>
+              </div>
+            </div>
+            <div class="design-tab-body">
+              <div class="design-tab-item">
+                <span class="icon-down-solid fs-12 mx-3 cursor-pointer openClose-design-tab"></span>
+                1440x720 px
+                <span class="icon-image mx-3"></span>
+                <span class="icon-video"></span>
+
+                <span class="solid"></span>
+
+                <span class="icon-time mx-3"></span>
+                10 сек
+
+                <span class="solid"></span>
+                <span class="icon-map mx-3"></span>
+                1
+                <span class="solid me-0"></span>
+                <img src="images/post-2.png" alt="image" width="85">
+
+                <a href="#" class="c-green">
+                  <span class="icon-upload ms-3 me-2"></span>
+                  Заменить макет
+                </a>
+
+                <span class="solid"></span>
+
+                <a href="#" class="c-green">
+                  <span class="icon-two-check ms-3 me-2"></span>
+                  Одобрено
+                </a>
+
+                <span class="solid"></span>
+
+                <span class="icon-remove mx-3 cursor-pointer"></span>
+              </div>
+
+              <div class="design-tab-item design-tab-item-body ms-3 fs-12">
+                946255
+                <span class="solid none"></span>
+
+                <div class="w-167">
+                  Москва, Звенигородское ш. Х 2-й Силикатный пр-зд., д.9, стр. 5
+                </div>
+
+                <span class="solid none"></span>
+                Сторона: А1
+
+                <span class="solid none"></span>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="uniform-design-tab-item-2">
+                  <label class="form-check-label c-black fs-16 mb-0 c-black-400" for="uniform-design-tab-item-2">
+                    Вкл/выкл
+                  </label>
+                </div>
+
+                <a href="#" class="c-green fs-14">
+                  Нет макетов
+                  <span class="icon-upload ms-3 me-2"></span>
+                </a>
+
+                <span class="solid transformed"></span>
+
+                <a href="#" class="c-green fs-14">
+                  <span class="icon-two-check ms-3 me-2"></span>
+                  Одобрено
+                </a>
+
+                <span class="solid"></span>
+
+                <span class="icon-remove mx-3 cursor-pointer fs-14"></span>
+              </div>
             </div>
           </div>
         </div>

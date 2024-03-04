@@ -144,8 +144,6 @@ const oneDay = Array.from({length: 24}).map(() => true);
 
 const monthChecking = Array.from({length: 7}).map(() => oneDay)
 
-console.log(monthChecking)
-
 monthChecking.forEach((item) => {
     $('#monty-body').append(`
       <div class="d-flex justify-content-between align-items-center gap-10">
@@ -157,6 +155,21 @@ monthChecking.forEach((item) => {
 function createRow(item){
     return item.map((box) => `<label class="mt-1"><input type="checkbox" class="default-checkbox" checked="${box}"></label>`).join('')
 }
+
+const designTabBody = document.querySelectorAll('.design-tab-body');
+const openCloseDesignTab = document.querySelectorAll('.openClose-design-tab');
+
+openCloseDesignTab.forEach((item, index) => {
+    item.addEventListener('click', function (){
+        console.log(designTabBody[index])
+        if(designTabBody[index].classList.contains(active)){
+            designTabBody[index].classList.remove(active)
+        } else {
+            designTabBody[index].classList.add(active)
+        }
+    })
+})
+
 
 
 

@@ -37,21 +37,6 @@ a {
   text-decoration: none;
 }
 
-@media (max-width: 1024px) {
-  html {
-    font-size: 15px;
-  }
-}
-@media (max-width: 992px) {
-  html {
-    font-size: 14px;
-  }
-}
-@media (max-width: 768px) {
-  html {
-    font-size: 13px;
-  }
-}
 .cursor-pointer {
   cursor: pointer;
 }
@@ -564,6 +549,53 @@ a {
 .month-time-item span {
   white-space: nowrap;
   transform: rotate(-90deg) translate(15px, -14px);
+}
+
+.design-tab {
+  border: 1px solid rgba(35, 35, 35, 0.2);
+  width: 850px;
+}
+.design-tab-item {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color: #232323;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(35, 35, 35, 0.2);
+}
+.design-tab-item .openClose-design-tab {
+  transition: 0.3s;
+  transform: rotate(0deg);
+}
+.design-tab-item.design-tab-item-body {
+  border-bottom: 0 solid rgba(35, 35, 35, 0.2);
+}
+.design-tab-item.design-tab-item-body .solid {
+  height: 76px;
+}
+.design-tab .design-tab-item-body {
+  overflow: hidden;
+  height: 0;
+  transition: 0.3s;
+}
+.design-tab .design-tab-body.active .design-tab-item-body {
+  height: auto;
+}
+.design-tab .design-tab-body.active .openClose-design-tab {
+  transform: rotate(-180deg);
+}
+.design-tab .solid {
+  display: inline-block;
+  width: 0.5px;
+  height: 40px;
+  background-color: rgba(35, 35, 35, 0.2);
+  margin: 0 10px;
+}
+.design-tab .solid.none {
+  background-color: transparent;
+}
+.design-tab .solid.transformed {
+  transform: translateX(1px);
 }
 
 /*# sourceMappingURL=style.css.map */
