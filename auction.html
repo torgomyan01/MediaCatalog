@@ -30,7 +30,7 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/imask.js"></script>
   <script src="js/multiple-select.min.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js"></script>
 
   <title>MediaCatalog</title>
 
@@ -51,10 +51,10 @@
       <div class="w-56 minh-56 menu-left-item">
         <span class="icon-maps fs-18 c-blackGrey"></span>
       </div>
-      <div class="w-56 minh-56 menu-left-item">
+      <div class="w-56 minh-56 menu-left-item active">
         <span class="icon-list fs-18 c-blackGrey"></span>
       </div>
-      <div class="w-56 minh-56 menu-left-item active">
+      <div class="w-56 minh-56 menu-left-item">
         <span class="icon-image fs-18 c-blackGrey"></span>
       </div>
       <div class="w-56 minh-56 menu-left-item">
@@ -85,7 +85,7 @@
             <span class="icon-check fs-14"></span>
              Макеты
           </span>
-          <span class="nav-steps main-content-tab opacity-25">
+          <span class="nav-steps main-content-tab">
             <span class="step-count">4</span>
             <span class="icon-check fs-14"></span>
             Информация
@@ -111,7 +111,7 @@
 
 
       <div>
-        <div class="row m-0 ads-company-row step-item d-none">
+        <div class="row m-0 ads-company-row step-item">
 
           <div class="col-3 pt-19 ps-24 h-100 overflow-y-auto">
             <div class="select-info">
@@ -373,7 +373,7 @@
             </div>
           </div>
 
-          <div class="col-9 border-left h-100 pt-10 overflow-y-auto">
+          <div class="col-9 border-left h-100 pt-15 overflow-y-auto">
             <h3 class="fs-36 fw-bold c-black mb-3">
               Аукцион
             </h3>
@@ -536,7 +536,7 @@
                   <span class="fs-16 c-black-600 d-flex justify-content-start align-items-center mb-2">
                     Интервал между показами, сек
                     <span class="default-tooltip m-0 ms-1">
-                      <span class="default-tooltip-text">Минимальный интервал между показами рекламного сообщения на одной поверхности.</span>
+                      <span class="default-tooltip-text" style="left: -20px">Минимальный интервал между показами рекламного сообщения на одной поверхности.</span>
                       <span class="icon-quation-circle fs-14 c-black-600"></span>
                     </span>
                   </span>
@@ -767,7 +767,7 @@
           </div>
         </div>
 
-        <div class="ads-company-row step-item ps-25">
+        <div class="ads-company-row step-item ps-25 d-none">
           <h3 class="fs-36 fw-bold c-black mb-3">
             Аукцион
           </h3>
@@ -779,147 +779,454 @@
           <div class="design-tab">
             <div class="design-tab-body">
               <div class="design-tab-item">
-                <span class="icon-down-solid fs-12 mx-3 cursor-pointer openClose-design-tab"></span>
-                1440x720 px
-                <span class="icon-image mx-3"></span>
-                <span class="icon-video"></span>
-
-                <span class="solid"></span>
-
-                <span class="icon-time mx-3"></span>
-                10 сек
-
-                <span class="solid"></span>
-                <span class="icon-map mx-3"></span>
-                1
-                <span class="solid me-0"></span>
-                <img src="images/post-2.png" alt="image" width="85">
-
-                <a href="#" class="c-green">
-                  <span class="icon-upload ms-3 me-2"></span>
-                  Заменить макет
-                </a>
-
-                <span class="solid"></span>
-
-                <a href="#" class="c-green">
-                  <span class="icon-two-check ms-3 me-2"></span>
-                  Одобрено
-                </a>
-
-                <span class="solid"></span>
-
-                <span class="icon-remove mx-3 cursor-pointer"></span>
+                <div class="design-tab-item-td w-200">
+                  <span class="icon-down-solid fs-12 me-2 cursor-pointer openClose-design-tab"></span>
+                  1440x720 px
+                  <span class="icon-image mx-3 fs-12"></span>
+                  <span class="icon-video fs-12"></span>
+                </div>
+                <div class="design-tab-item-td">
+                  <span class="icon-time me-2"></span>
+                  10 сек
+                </div>
+                <div class="design-tab-item-td w-80 justify-content-center">
+                  <span class="icon-map me-3"></span>
+                  1
+                </div>
+                <div class="design-tab-item-td p-0 w-85">
+                  <img src="images/post-2.png" alt="image" width="85">
+                </div>
+                <div class="design-tab-item-td">
+                  <a href="#" class="c-green fs-12">
+                    <span class="icon-upload me-2"></span>
+                    Заменить макет
+                  </a>
+                </div>
+                <div class="design-tab-item-td minw-133">
+                  <a href="#" class="c-green">
+                    <span class="icon-two-check me-2"></span>
+                    Одобрено
+                  </a>
+                </div>
+                <div class="design-tab-item-td minw-71">
+                  <span class="icon-remove mx-3 c-black-600 cursor-pointer"></span>
+                </div>
               </div>
 
               <div class="design-tab-item design-tab-item-body ms-3 fs-12">
-                946255
-                <span class="solid none"></span>
 
-                <div class="w-167">
+                <div class="design-tab-item-td w-85 border-0">
+                  946255
+                </div>
+
+                <div class="design-tab-item-td w-183 minw-183 text-wrap border-0">
                   Москва, Звенигородское ш. Х 2-й Силикатный пр-зд., д.9, стр. 5
                 </div>
 
-                <span class="solid none"></span>
-                Сторона: А1
-
-                <span class="solid none"></span>
-                <div class="form-check form-switch">
-                  <input class="form-check-input" type="checkbox" role="switch" id="uniform-design-tab-item-1">
-                  <label class="form-check-label c-black fs-16 mb-0 c-black-400" for="uniform-design-tab-item-1">
-                    Вкл/выкл
-                  </label>
+                <div class="design-tab-item-td border-0">
+                  Сторона: А1
                 </div>
 
-                <a href="#" class="c-green fs-14">
-                  <span class="icon-upload ms-3 me-2"></span>
-                  Заменить макет
-                </a>
+                <div class="design-tab-item-td border-0">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="uniform-design-tab-item-1">
+                    <label class="form-check-label c-black fs-14 mb-0 c-black-400" for="uniform-design-tab-item-1">
+                      Вкл/выкл
+                    </label>
+                  </div>
+                </div>
 
-                <span class="solid transformed"></span>
+                <div class="design-tab-item-td ">
+                  <a href="#" class="c-green fs-12">
+                    <span class="icon-upload me-2"></span>
+                    Заменить макет
+                  </a>
+                </div>
 
-                <a href="#" class="c-green fs-14">
-                  <span class="icon-two-check ms-3 me-2"></span>
-                  Одобрено
-                </a>
+                <div class="design-tab-item-td minw-133">
+                   <a href="#" class="c-green fs-14">
+                     <span class="icon-two-check me-2"></span>
+                     Одобрено
+                   </a>
+                </div>
 
-                <span class="solid"></span>
+                <div class="design-tab-item-td minw-71 justify-content-center">
+                  <span class="icon-remove cursor-pointer c-black-600 fs-14"></span>
+                </div>
+              </div>
+              <div class="design-tab-item design-tab-item-body ms-3 fs-12">
 
-                <span class="icon-remove mx-3 cursor-pointer fs-14"></span>
+                <div class="design-tab-item-td w-85 border-0">
+                  946255
+                </div>
+
+                <div class="design-tab-item-td w-183 minw-183 text-wrap border-0">
+                  Москва, Звенигородское ш. Х 2-й Силикатный пр-зд., д.9, стр. 5
+                </div>
+
+                <div class="design-tab-item-td border-0">
+                  Сторона: А1
+                </div>
+
+                <div class="design-tab-item-td border-0">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="uniform-design-tab-item-2">
+                    <label class="form-check-label c-black fs-14 mb-0 c-black-400" for="uniform-design-tab-item-2">
+                      Вкл/выкл
+                    </label>
+                  </div>
+                </div>
+
+                <div class="design-tab-item-td ">
+                  <a href="#" class="c-green fs-12">
+                    <span class="icon-upload me-2"></span>
+                    Заменить макет
+                  </a>
+                </div>
+
+                <div class="design-tab-item-td minw-133">
+                   <a href="#" class="c-green fs-14">
+                     <span class="icon-two-check me-2"></span>
+                     Одобрено
+                   </a>
+                </div>
+
+                <div class="design-tab-item-td minw-71 justify-content-center">
+                  <span class="icon-remove cursor-pointer c-black-600 fs-14"></span>
+                </div>
               </div>
             </div>
             <div class="design-tab-body">
+
               <div class="design-tab-item">
-                <span class="icon-down-solid fs-12 mx-3 cursor-pointer openClose-design-tab"></span>
-                1440x720 px
-                <span class="icon-image mx-3"></span>
-                <span class="icon-video"></span>
+                <div class="design-tab-item-td w-200">
+                  <span class="icon-down-solid fs-12 me-2 cursor-pointer openClose-design-tab"></span>
+                  1440x720 px
+                  <span class="icon-image mx-3 fs-12"></span>
+                  <span class="icon-video fs-12"></span>
+                </div>
+                <div class="design-tab-item-td">
+                  <span class="icon-time me-2"></span>
+                  10 сек
+                </div>
+                <div class="design-tab-item-td w-80 justify-content-center">
+                  <span class="icon-map me-3"></span>
+                  1
+                </div>
+                <div class="design-tab-item-td p-0 w-85">
+                  <img src="images/post-1.png" alt="image" width="85">
+                </div>
+                <div class="design-tab-item-td">
+                  <a href="#" class="c-green fs-12">
+                    <span class="icon-upload me-2"></span>
+                    Заменить макет
+                  </a>
+                </div>
+                <div class="design-tab-item-td w-133">
+                  <div class="c-black fs-14 d-flex align-items-center justify-content-between w-100">
+                    Нет макетов
+                    <div class="default-tooltip right ms-1 me-0">
+                      <span class="default-tooltip-text p-2">
 
-                <span class="solid"></span>
+                        К сожалению Ваш макет отклонен по причине: <span class="c-yellow">необходимо <br>
+                        добавить возрастные ограничения.</span>
+                          <br><br>
+                        Замените макет для последующей модерации.
 
-                <span class="icon-time mx-3"></span>
-                10 сек
+                        <button class="green-btn outline mt-3 d-block" data-bs-toggle="modal" data-bs-target="#upload-design">
+                          <span class="icon-upload me-2"></span>
+                          Заменить макет
+                        </button>
 
-                <span class="solid"></span>
-                <span class="icon-map mx-3"></span>
-                1
-                <span class="solid me-0"></span>
-                <img src="images/post-2.png" alt="image" width="85">
-
-                <a href="#" class="c-green">
-                  <span class="icon-upload ms-3 me-2"></span>
-                  Заменить макет
-                </a>
-
-                <span class="solid"></span>
-
-                <a href="#" class="c-green">
-                  <span class="icon-two-check ms-3 me-2"></span>
-                  Одобрено
-                </a>
-
-                <span class="solid"></span>
-
-                <span class="icon-remove mx-3 cursor-pointer"></span>
+                      </span>
+                      <span class="icon-warning c-red fs-14"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="design-tab-item-td minw-71">
+                  <span class="icon-remove mx-3 c-black-600 cursor-pointer"></span>
+                </div>
               </div>
+
 
               <div class="design-tab-item design-tab-item-body ms-3 fs-12">
-                946255
-                <span class="solid none"></span>
-
-                <div class="w-167">
+                <div class="design-tab-item-td w-85 border-0">
+                  946255
+                </div>
+                <div class="design-tab-item-td w-183 minw-183 text-wrap border-0">
                   Москва, Звенигородское ш. Х 2-й Силикатный пр-зд., д.9, стр. 5
                 </div>
-
-                <span class="solid none"></span>
-                Сторона: А1
-
-                <span class="solid none"></span>
-                <div class="form-check form-switch">
-                  <input class="form-check-input" type="checkbox" role="switch" id="uniform-design-tab-item-2">
-                  <label class="form-check-label c-black fs-16 mb-0 c-black-400" for="uniform-design-tab-item-2">
-                    Вкл/выкл
-                  </label>
+                <div class="design-tab-item-td border-0">
+                  Сторона: А1
                 </div>
+                <div class="design-tab-item-td border-0">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="uniform-design-tab-item-3">
+                    <label class="form-check-label c-black fs-14 mb-0 c-black-400" for="uniform-design-tab-item-3">
+                      Вкл/выкл
+                    </label>
+                  </div>
+                </div>
+                <div class="design-tab-item-td ">
+                  <a href="#" class="c-green fs-12">
+                    <span class="icon-upload me-2"></span>
+                    Заменить макет
+                  </a>
+                </div>
+                <div class="design-tab-item-td minw-133 justify-content-between">
+                   <div class="c-black fs-14 d-flex align-items-center justify-content-between w-100">
+                     Нет макетов
+                     <div class="default-tooltip right ms-1 me-0">
+                       <span class="default-tooltip-text">
+                        К сожалению Ваш макет отклонен по причине: <span class="c-yellow">необходимо <br>
+                        добавить возрастные ограничения.</span>
+                          <br><br>
+                        Замените макет для последующей модерации.
 
-                <a href="#" class="c-green fs-14">
-                  Нет макетов
-                  <span class="icon-upload ms-3 me-2"></span>
-                </a>
-
-                <span class="solid transformed"></span>
-
-                <a href="#" class="c-green fs-14">
-                  <span class="icon-two-check ms-3 me-2"></span>
-                  Одобрено
-                </a>
-
-                <span class="solid"></span>
-
-                <span class="icon-remove mx-3 cursor-pointer fs-14"></span>
+                        <button class="green-btn outline mt-3 d-block mb-2" data-bs-toggle="modal" data-bs-target="#upload-design">
+                          <span class="icon-upload me-2"></span>
+                          Заменить макет
+                        </button>
+                       </span>
+                       <span class="icon-warning c-red fs-14"></span>
+                     </div>
+                   </div>
+                </div>
+                <div class="design-tab-item-td minw-71 justify-content-center">
+                  <span class="icon-remove cursor-pointer c-black-600 fs-14"></span>
+                </div>
               </div>
+              <div class="design-tab-item design-tab-item-body ms-3 fs-12">
+                <div class="design-tab-item-td w-85 border-0">
+                  946255
+                </div>
+                <div class="design-tab-item-td w-183 minw-183 text-wrap border-0">
+                  Москва, Звенигородское ш. Х 2-й Силикатный пр-зд., д.9, стр. 5
+                </div>
+                <div class="design-tab-item-td border-0">
+                  Сторона: А1
+                </div>
+                <div class="design-tab-item-td border-0">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="uniform-design-tab-item-4">
+                    <label class="form-check-label c-black fs-14 mb-0 c-black-400" for="uniform-design-tab-item-4">
+                      Вкл/выкл
+                    </label>
+                  </div>
+                </div>
+                <div class="design-tab-item-td ">
+                  <a href="#" class="c-green fs-12">
+                    <span class="icon-upload me-2"></span>
+                    Заменить макет
+                  </a>
+                </div>
+                <div class="design-tab-item-td minw-133 justify-content-between">
+                   <div class="c-black fs-14 d-flex align-items-center justify-content-between w-100">
+                     Отклонено
+                     <span class="icon-warning c-red fs-14 ms-3"></span>
+                   </div>
+                </div>
+                <div class="design-tab-item-td minw-71 justify-content-center">
+                  <span class="icon-remove cursor-pointer c-black-600 fs-14"></span>
+                </div>
+              </div>
+              <div class="design-tab-item design-tab-item-body ms-3 fs-12">
+                <div class="design-tab-item-td w-85 border-0">
+                  946255
+                </div>
+                <div class="design-tab-item-td w-183 minw-183 text-wrap border-0">
+                  Москва, Звенигородское ш. Х 2-й Силикатный пр-зд., д.9, стр. 5
+                </div>
+                <div class="design-tab-item-td border-0">
+                  Сторона: А1
+                </div>
+                <div class="design-tab-item-td border-0">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="uniform-design-tab-item-5">
+                    <label class="form-check-label c-black fs-14 mb-0 c-black-400" for="uniform-design-tab-item-5">
+                      Вкл/выкл
+                    </label>
+                  </div>
+                </div>
+                <div class="design-tab-item-td ">
+                  <a href="#" class="c-green fs-12">
+                    <span class="icon-upload me-2"></span>
+                    Заменить макет
+                  </a>
+                </div>
+                <div class="design-tab-item-td minw-133 justify-content-between">
+                   <div class="c-black fs-14 d-flex align-items-center justify-content-between w-100">
+                     На модерации
+                     <span class="icon-in c-yellow fs-12 ms-2"></span>
+                   </div>
+                </div>
+                <div class="design-tab-item-td minw-71 justify-content-center">
+                  <span class="icon-remove cursor-pointer c-black-600 fs-14"></span>
+                </div>
+              </div>
+
             </div>
           </div>
+
+          <div class="w-800 d-flex justify-content-end mt-3">
+            <button class="green-btn step-menu" data-step="3">
+              Запустить кампанию
+              <span class="icon-right ms-2"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="ads-company-row step-item ps-25 pt-15 d-none">
+          <h3 class="fs-36 fw-bold c-black mb-3">
+            Название рекламной кампании
+          </h3>
+
+          <div class="d-flex justify-content-start align-items-center">
+            <button class="green-btn me-3">
+              <span class="icon-play me-2"></span>
+              Запустить кампанию
+            </button>
+            <button class="btn c-black-700">
+              <span class="icon-download me-2"></span>
+              Скачать отчет
+            </button>
+          </div>
+
+          <div class="d-flex justify-content-start align-items-center mt-5">
+            <div class="w-128 h-64 bgc-black-100 p-2 me-4">
+              <b class="c-black fs-12 mb-2 d-block">Бюджет</b>
+              <span class="fs-12">260 000 ₽ </span>
+            </div>
+            <div class="w-128 h-64 bgc-black-100 p-2 me-4">
+              <b class="c-black fs-12 mb-2 d-block">Расход</b>
+              <span class="fs-12">26 000, 80 ₽ </span>
+            </div>
+            <div class="w-128 h-64 bgc-black-100 p-2 me-4">
+              <b class="c-black fs-12 mb-2 d-block">Показы</b>
+              <span class="fs-12">7 690</span>
+            </div>
+            <div class="w-128 h-64 bgc-black-100 p-2 me-4">
+              <b class="c-black fs-12 mb-2 d-block">OTS</b>
+              <span class="fs-12">347 690</span>
+            </div>
+          </div>
+
+          <div class="fw-bold fs-16 c-black my-4">
+            Конструкции
+          </div>
+
+          <table class="default-table mt-4 w-770">
+            <tbody>
+            <tr>
+              <th>
+                <div>
+                  <label class="form-check-label fw-bold d-flex align-items-center justify-content-start">
+                    <input class="form-check-input mt-0 select-all-table" type="checkbox" value="">
+                    <span class="fs-12">ID</span>
+                  </label>
+                </div>
+              </th>
+              <th>
+                <div class="fs-12">
+                  Адрес
+                </div>
+              </th>
+              <th>
+                <div class="fs-12">
+                  Тип
+                </div>
+              </th>
+              <th>
+                <div class="fs-12">
+                  Сторона
+                </div>
+              </th>
+              <th>
+                <div class="fs-12">
+                  Показы
+                </div>
+              </th>
+              <th>
+                <div class="fs-12">
+                  Бюджет
+                </div>
+              </th>
+              <th>
+                <div class="fs-12">
+                  OTS
+                </div>
+              </th>
+              <th>
+                <div class="fs-12">
+                  Фотоотчет
+                </div>
+              </th>
+            </tr>
+            <tr>
+              <td>
+                <div>
+                  <label class="form-check-label d-flex align-items-center justify-content-start">
+                    <input class="form-check-input mt-0" type="checkbox" value="">
+                    <span class="fs-12">81250</span>
+                  </label>
+                </div>
+              </td>
+              <td class="ps-2">
+                <div class="fs-12 c-black">
+                  Москва, Сахарова Академика пр-т.
+                </div>
+              </td>
+              <td class="ps-2">
+                <div class="fs-12 c-black">
+                  Билборд <br>
+                  3х6 м
+                </div>
+              </td>
+              <td class="ps-2">
+                <div class="fs-12 c-black text-center">
+                  A1-A10
+                </div>
+              </td>
+              <td class="ps-2">
+                <div class="fs-12 c-black text-center">
+                  34
+                </div>
+              </td>
+              <td class="ps-2">
+                <div class="fs-12 c-black text-center">
+                  300 ₽
+                </div>
+              </td>
+              <td class="ps-2">
+                <div class="fs-12 c-black text-center">
+                  400
+                </div>
+              </td>
+              <td class="ps-2">
+                <div class="fs-12 c-black text-center">
+                  Смотреть
+                </div>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+
+          <div class="d-flex justify-content-start align-items-center mt-5">
+            <label class="default-range me-4">
+              <input type="radio" class="d-none" name="select-chart">
+              <span></span>
+              По дням
+            </label>
+            <label class="default-range">
+              <input type="radio" class="d-none" name="select-chart">
+              <span></span>
+              По часам
+            </label>
+          </div>
+
+         <div class="mt-3">
+           <canvas id="chartId" width="590"></canvas>
+         </div>
         </div>
       </div>
     </div>
@@ -1083,6 +1390,115 @@
     </div>
   </div>
 
+
+
+  <!-- Modal Upload maket -->
+  <div class="modal fade" id="upload-design" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content ">
+        <div class="modal-header border-0 d-flex justify-content-between align-items-center">
+          <h3 class="fs-36 c-black fw-bold mt-3">Загрузка макета</h3>
+          <button type="button" class="mt-3 me-3 border bc-green w-40 h-40 c-green bgc-white d-flex justify-content-center align-items-center" data-bs-dismiss="modal" aria-label="Close">
+            <span class="icon-close"></span>
+          </button>
+        </div>
+        <div class="modal-body p-4 pt-0">
+          <div class="row mt-3 m-0">
+            <div class="col-6">
+              <div class="upload-design br-6">
+                <p class="c-black-600 fs-14 text-center mb-0">
+                  Перетащите файлы сюда или нажмите
+                  на кнопку
+                </p>
+                <p class="fs-12 c-black-400 text-center ">
+                  Поддерживаемые форматы: MP4, PNG, JPG
+                </p>
+
+                <div class="d-flex justify-content-center align-items-center">
+                  <label class="w-159 h-32 d-flex justify-content-center align-items-center bgc-black-100 fs-14 c-black-800 br-6">
+                    <input type="file" class="d-none">
+                    <span class="icon-file me-1"></span>
+                    Загрузить файл
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul class="list-unstyled">
+                <li class="c-black fs-14 mb-3">
+                  Разрешение: 1440х720 px
+                </li>
+                <li class="c-black fs-14 mb-3">
+                  Тип контента:
+                  <span class="icon-image mx-2"></span>
+                  <span class="icon-video"></span>
+                </li>
+                <li class="c-black fs-14 mb-3">
+                  <span class="icon-time me-2"></span>
+                  10 сек
+                </li>
+                <li class="c-green fs-14 mb-3">
+                  <span class="icon-upload me-2"></span>
+                  Юридическая информация
+                </li>
+                <li class="c-green fs-14 mb-3">
+                  <span class="icon-upload me-2"></span>
+                  Техническая информация
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <h4 class="c-black fs-16 fw-bolder mb-3 mt-4">
+            Рекомендуемые
+          </h4>
+          <div class="row">
+            <div class="col-4 ps-0">
+              <label class="d-flex justify-content-start align-items-start">
+                <span class="form-check-label ms-3">
+                  <input class="form-check-input w-20 h-20" type="checkbox" value="">
+                </span>
+                <span>
+                  <img src="images/post-1.png" alt="image" class="w-100">
+                  <span class="d-flex justify-content-start align-items-start mt-3 fs-12 c-black">
+                    <span class="icon-image me-2 fs-16 mt-1"></span>
+                    Лазерная резка металла на трассе М11
+                  </span>
+
+                </span>
+              </label>
+            </div>
+            <div class="col-4 ps-0">
+              <label class="d-flex justify-content-start align-items-start">
+                <span class="form-check-label ms-3">
+                  <input class="form-check-input w-20 h-20" type="checkbox" value="">
+                </span>
+                <span>
+                  <img src="images/post-2.png" alt="image" class="w-100">
+                  <span class="d-flex justify-content-start align-items-start mt-3 fs-12 c-black">
+                    <span class="icon-image me-2 fs-16 mt-1"></span>
+                    Лазерная резка металла на трассе М11
+                  </span>
+
+                </span>
+              </label>
+            </div>
+            <div class="col-4">
+              <a href="#" class="c-black mt-40 d-block">
+                Показать ещё
+              </a>
+            </div>
+          </div>
+
+          <div class="mt-4 text-center">
+            <button class="green-btn">Отправить на модерацию</button>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
 
 </div>
 

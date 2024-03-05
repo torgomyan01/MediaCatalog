@@ -322,6 +322,13 @@ a {
   &:hover {
     background-color: #248d58;
   }
+
+  &.outline{
+    background-color: #fff;
+    color: #248d58;
+    border: 1px solid #248d58;
+    border-radius: 5px;
+  }
 }
 
 .ads-company-row {
@@ -366,6 +373,8 @@ a {
   flex-direction: column;
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: 1;
+
 
   &-text {
     position: absolute;
@@ -393,6 +402,20 @@ a {
       transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
 
+  }
+
+  &.right{
+    pointer-events: unset !important;
+    .default-tooltip-text{
+      top: 100% !important;
+      right: 0;
+      left: unset;
+      transform: translate(100%, -27px) rotate(0) !important;
+      &::before{
+        top: 12px;
+        left: 0px;
+      }
+    }
   }
 
   &:hover{
@@ -619,7 +642,7 @@ a {
 
 .design-tab{
   border: 1px solid #23232333;
-  width: 850px;
+  width: 800px;
 
   &-item{
    @include flex('s', 'c');
@@ -637,18 +660,37 @@ a {
         height: 76px;
       }
     }
+
+    &-td{
+      height: 40px;
+      @include flex('s', 'c');
+      border-right: 1px solid lightgrey;
+      padding-right: 12px;
+      padding-left: 12px;
+      white-space: nowrap;
+
+      &:last-child{
+        border-right: 0;
+      }
+    }
   }
 
   .design-tab-item-body{
     overflow: hidden;
     height: 0;
     transition: 0.3s;
+    .design-tab-item-td{
+      height: 76px;
+      //border-right-color: transparent;
+      padding: 0 5px;
+    }
   }
 
   .design-tab-body{
     &.active{
       .design-tab-item-body{
         height: auto;
+        overflow: unset;
       }
       .openClose-design-tab{
         transform: rotate(-180deg);

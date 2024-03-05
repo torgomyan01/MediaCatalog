@@ -170,6 +170,39 @@ openCloseDesignTab.forEach((item, index) => {
     })
 })
 
+const chrt = document.getElementById("chartId").getContext("2d");
+const chartId = new Chart(chrt, {
+    type: 'line',
+    data: {
+        labels: [
+            '24 июл',
+            '31 июл',
+            '7 авг',
+            '14 авг',
+            '21 авг',
+            '28 авг',
+            '4 сен',
+            '11 сен',
+            '18 сен',
+            '25 сен',
+            '2 окт',
+            '9 окт',
+            '16 окт',
+        ],
+        datasets: [{
+            label: "online tutorial subjects",
+            data: [0, 400, 800, 1200, 200, 556, 687, 493, 466,322, 933, 566, 877],
+            backgroundColor: ['#2E9F65'],
+            borderColor: ['#2E9F65'],
+            borderWidth: 2,
+            pointRadius: 5,
+        }],
+    },
+    options: {
+        responsive: false,
+    },
+});
+
 
 
 
